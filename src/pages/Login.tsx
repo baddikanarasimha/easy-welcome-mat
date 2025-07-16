@@ -32,8 +32,14 @@ const Login = () => {
     setTimeout(() => {
       toast({
         title: "Success",
-        description: "Login form submitted successfully!",
+        description: "Login successful! Welcome back.",
       });
+      
+      // Clear form fields after successful login
+      setEmail('');
+      setPassword('');
+      setShowPassword(false);
+      
       setIsLoading(false);
     }, 1000);
   };
