@@ -5,6 +5,7 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Eye, EyeOff, Lock, Mail } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -116,12 +117,12 @@ const Login = () => {
                     Remember me
                   </Label>
                 </div>
-                <a
-                  href="#"
+                <Link
+                  to="/forgot-password"
                   className="text-sm text-primary hover:text-primary/80 transition-colors"
                 >
                   Forgot password?
-                </a>
+                </Link>
               </div>
 
               <Button
@@ -136,12 +137,12 @@ const Login = () => {
             <div className="mt-6 text-center">
               <p className="text-sm text-muted-foreground">
                 Don't have an account?{' '}
-                <a
-                  href="#"
+                <Link
+                  to="/signup"
                   className="text-primary hover:text-primary/80 font-medium transition-colors"
                 >
                   Sign up
-                </a>
+                </Link>
               </p>
             </div>
           </CardContent>
